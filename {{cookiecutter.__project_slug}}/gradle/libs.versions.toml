@@ -7,7 +7,7 @@ toxopid = "4.1.2"
 lombok = "1.18.42"
 junit = "5.14.0"
 {% if cookiecutter.use_xcore_plugin %}xcore-plugin = "{{ cookiecutter.xcore_plugin_version }}"
-cloud-mindustry = "5021268676"
+cloud-mindustry = "0.2.0-SNAPSHOT"
 {% endif %}{% if cookiecutter.use_flubundle %}flubundle = "{{ cookiecutter.flubundle_version }}"
 {% endif %}
 [libraries]
@@ -19,7 +19,7 @@ avaje-inject-gen = { module = "io.avaje:avaje-inject-generator", version.ref = "
 junit-bom = { module = "org.junit:junit-bom", version.ref = "junit" }
 junit-jupiter = { module = "org.junit.jupiter:junit-jupiter" }
 {% if cookiecutter.use_xcore_plugin %}xcore-plugin = { module = "org.xcore.plugin:XCore-plugin", version.ref = "xcore-plugin" }
-cloud-mindustry = { module = "com.github.XCore-mindustry:cloud-mindustry", version.ref = "cloud-mindustry" }
+cloud-mindustry = { module = "org.xcore:cloud-mindustry", version.ref = "cloud-mindustry" }
 {% endif %}{% if cookiecutter.use_flubundle %}flubundle = { module = "com.ospx:flubundle", version.ref = "flubundle" }
 {% endif %}
 [plugins]
