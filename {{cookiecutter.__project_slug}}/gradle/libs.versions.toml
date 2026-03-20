@@ -1,0 +1,28 @@
+[versions]
+java = "25"
+mindustry = "{{ cookiecutter.mindustry_version }}"
+avaje = "12.3"
+shadow = "9.3.0"
+toxopid = "4.1.2"
+lombok = "1.18.42"
+junit = "5.14.0"
+{% if cookiecutter.use_xcore_plugin %}xcore-plugin = "{{ cookiecutter.xcore_plugin_version }}"
+cloud-mindustry = "5021268676"
+{% endif %}{% if cookiecutter.use_flubundle %}flubundle = "{{ cookiecutter.flubundle_version }}"
+{% endif %}
+[libraries]
+arc-core = { module = "com.github.Anuken.Arc:arc-core", version.ref = "mindustry" }
+mindustry-core = { module = "com.github.Anuken.Mindustry:core", version.ref = "mindustry" }
+lombok = { module = "org.projectlombok:lombok", version.ref = "lombok" }
+avaje-inject = { module = "io.avaje:avaje-inject", version.ref = "avaje" }
+avaje-inject-gen = { module = "io.avaje:avaje-inject-generator", version.ref = "avaje" }
+junit-bom = { module = "org.junit:junit-bom", version.ref = "junit" }
+junit-jupiter = { module = "org.junit.jupiter:junit-jupiter" }
+{% if cookiecutter.use_xcore_plugin %}xcore-plugin = { module = "org.xcore.plugin:XCore-plugin", version.ref = "xcore-plugin" }
+cloud-mindustry = { module = "com.github.XCore-mindustry:cloud-mindustry", version.ref = "cloud-mindustry" }
+{% endif %}{% if cookiecutter.use_flubundle %}flubundle = { module = "com.ospx:flubundle", version.ref = "flubundle" }
+{% endif %}
+[plugins]
+avaje-inject = { id = "io.avaje.inject", version.ref = "avaje" }
+shadow = { id = "com.gradleup.shadow", version.ref = "shadow" }
+toxopid = { id = "com.xpdustry.toxopid", version.ref = "toxopid" }
