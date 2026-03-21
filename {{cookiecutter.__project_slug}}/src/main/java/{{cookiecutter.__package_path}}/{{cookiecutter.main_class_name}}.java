@@ -24,12 +24,13 @@ public class {{ cookiecutter.main_class_name }} extends Plugin {
 {% if cookiecutter.use_xcore_plugin %}
                 .parent(parent)
 {% endif %}
+                .modules(new {{ cookiecutter.main_class_name }}Module())
                 .build();
 {% if cookiecutter.use_flubundle %}
         var bundle = scope.get(Bundle.class);
         bundle.addSource(getClass());
 {% endif %}
-        new PluginBootstrap().start();
+        scope.get(PluginBootstrap.class).start();
         Log.info("[{{ cookiecutter.plugin_display_name }}] Started successfully.");
     }
 }

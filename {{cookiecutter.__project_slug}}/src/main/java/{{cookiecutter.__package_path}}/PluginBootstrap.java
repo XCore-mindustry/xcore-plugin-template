@@ -1,7 +1,9 @@
 package {{ cookiecutter.package_name }};
 
 import arc.util.Log;
+import jakarta.inject.Singleton;
 
+@Singleton
 public class PluginBootstrap {
     public PluginBootstrap() {
     }
