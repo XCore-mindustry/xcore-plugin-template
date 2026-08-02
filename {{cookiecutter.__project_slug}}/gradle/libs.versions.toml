@@ -1,10 +1,10 @@
 [versions]
 java = "25"
 mindustry = "{{ cookiecutter.mindustry_version }}"
-avaje = "12.3"
+avaje = "12.5"
 shadow = "9.3.0"
-toxopid = "4.1.2"
-lombok = "1.18.42"
+toxopid = "4.2.0"
+lombok = "1.18.44"
 junit = "5.14.0"
 {% if cookiecutter.use_xcore_plugin %}xcore-plugin = "{{ cookiecutter.xcore_plugin_version }}"
 cloud-mindustry = "0.2.0-SNAPSHOT"
