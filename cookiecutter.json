@@ -33,7 +33,7 @@
   "author": "XCore Team",
   "mindustry_version": "159",
   "xcore_plugin_version": "4.2.1",
-  "flubundle_version": "1.6",
+  "flubundle_version": "1.7.1",
   "use_xcore_plugin": true,
   "use_flubundle": true,
   "__project_slug": "{{ cookiecutter.artifact_id }}",
